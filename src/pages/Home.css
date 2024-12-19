@@ -1,0 +1,262 @@
+/* Video Background */
+.video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Centering and Styling the Content */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.streaks {
+  position: relative;
+  top: -10vh;
+  left: 0;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.log-button .start-button{
+  font-family:'Courier New', Courier, monospace;
+}
+
+.streak-value {
+  font-weight: bold;
+}
+
+.center-text {
+  margin-top: 20px;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 3vw, 1.25rem);
+  margin-bottom: 20px;
+  position: relative;
+  top: -15vh; /* Use vh instead of rem for better responsiveness */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Updated user-info and button positioning */
+.user-info {
+  font-size: 1.5em;
+  position: relative;
+  transform: none;
+  margin: 20px 0;
+}
+
+
+@media (min-width: 1024px) {
+  .streaks {
+    position: absolute;
+    font-size: 1.4em;
+    top: 10px;
+    left: 20px;
+  }
+
+  .user-info {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+}
+
+.button-section {
+  position: relative;
+  transform: none;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .button-section {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    align-items: flex-end;
+  }
+}
+
+.log-button {
+  background-color: #00FF00;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 200px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.start-button {
+  background-color: #00FF00;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(1.5rem, 3vw, 1.25rem);
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 200px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+
+.start-button:hover, .log-button:hover {
+  background-color: #00cc00;
+}
+
+.difficulty-buttons {
+  display: flex;
+  flex-direction: column; /* Display buttons row-wise */
+  gap: 10px;
+}
+
+.difficulty-button {
+  background-color: #00FF00;
+  margin-right: 20px;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(1.2rem, 2.5vw, 1rem);
+  transition: background-color 0.3s ease;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+.difficulty-button:hover {
+  background-color: #00cc00;
+}
+
+
+/* 768px responsiveness */
+@media (min-width: 768px) {
+
+  .streaks {
+    position: absolute;
+    font-size: 1.4em;
+    top: 10px;
+    left: 20px;
+  }
+
+  .user-info {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+}
+
+.button-section {
+  position: relative;
+  transform: none;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .button-section {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    align-items: flex-end;
+  }
+
+  .difficulty-buttons {
+    display: block;
+    flex-direction: column; /* Display buttons row-wise */
+    gap: 10px;
+  }
+}
+
+.log-button {
+  background-color: #00FF00;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.start-button {
+  background-color: #00FF00;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 200px;
+}
+
+
+.start-button:hover, .log-button:hover {
+  background-color: #00cc00;
+}
+
+.difficulty-buttons {
+  display: block;
+  flex-direction: column; /* Display buttons row-wise */
+  gap: 10px;
+}
+
+.difficulty-button {
+  background-color: #00FF00;
+  margin-right: 20px;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  transition: background-color 0.3s ease;
+}
+
+.difficulty-button:hover {
+  background-color: #00cc00;
+}
+

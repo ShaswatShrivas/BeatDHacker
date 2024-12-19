@@ -1,0 +1,77 @@
+/* Video Background */
+.video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Centered Glass Container */
+.centered-content {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  width: 95%;
+  max-width: 900px;
+  height: 80%;
+  background: rgb(255 255 255 / 7%); /* Translucent glass effect */
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow-y: auto; /* Scrollable content */
+  padding: 20px;
+  color: #fff; /* Bright green text for contrast */
+  margin-top: 55px;
+}
+
+/* Scrollbar Customization */
+.centered-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.centered-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.centered-content h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.centered-content p,
+.centered-content ul {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .centered-content {
+      width: 95%;
+      height: 85%;
+      padding: 15px;
+  }
+
+  .centered-content h1 {
+      font-size: 1.8rem;
+  }
+
+  .centered-content p,
+  .centered-content ul {
+      font-size: 1.2rem;
+  }
+}

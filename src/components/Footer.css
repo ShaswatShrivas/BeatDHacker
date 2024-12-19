@@ -1,0 +1,44 @@
+/* Footer Styles */
+.footer {
+    padding: 10px;
+    background-color: #0b0b0c;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border-top: 1px solid #00FF00;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    font-size: 1.2em;
+  }
+
+  p{
+    font-size: 1.2em;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Mobile Responsive Styles for max-width: 425px */
+  @media screen and (max-width: 425px) {
+    .footer {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .footer ul {
+      gap: 10px;
+    }
+  }
+  
